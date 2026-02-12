@@ -19,7 +19,7 @@ export default function App() {
       return;
     }
 
-    const result = movies.filter((movie) => genre === selectedGenre);
+    const result = movies.filter((movie) => movie.genre === selectedGenre);
     setFilteredMovies(result);
   }, [selectedGenre]);
 
