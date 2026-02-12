@@ -12,6 +12,8 @@ const movies = [
 export default function App() {
   const [selectedGenre, setSelectedGenre] = useState("");
 
+  const [filteredMovies, setFilteredMovies] = useState(movies);
+
   return (
     <div>
       <h1>Movie Filter</h1>
@@ -28,7 +30,7 @@ export default function App() {
       </select>
 
       <ul>
-        {movies.map((movie) => (
+        {filteredMovies.map((movie) => (
           <li key={movie.title}>
             {movie.title} - {movie.genre}
           </li>
